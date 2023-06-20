@@ -1,0 +1,13 @@
+version: '3.9'
+
+services:
+  app:
+    image: 'demo_account:1.0'
+    build:
+      context: .
+    ports:
+      - "9090:8080"
+    deploy:
+      mode: replicated
+      replicas: 3
+
